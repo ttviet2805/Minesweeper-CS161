@@ -14,7 +14,7 @@ int main() {
         // INSTRUCTION
         // TEAMNAME
         // Soundtrack
-    startscreen();
+    Startscreen();
 
     // Change to next screen after click start
         // Menu

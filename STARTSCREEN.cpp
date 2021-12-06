@@ -5,24 +5,48 @@ using namespace sf;
 
 #include "MYCONST.h"
 #include "BUTTON.h"
+#include "MOUSE.h"
 
-void startscreen() {
+void Startscreen() {
+    // Make the window
     RenderWindow start_window(VideoMode(SROW, SCOL), "My Window");
 
-    Texture StartBg, Button_Start;
+    // Create background
+    Texture StartBg;
     StartBg.loadFromFile("IMAGE/STARTBG.jpg");
-    Button_Start.loadFromFile("IMAGE/MINESWEEPER.jpg");
-
-    Sprite StartBg_Sprite, MineButton_Sprite;
+    Sprite StartBg_Sprite;
     StartBg_Sprite.setTexture(StartBg);
-    //MineButton_Sprite.setTexture(MineButton);
-    // Make START BUTTON
-    ButtonClass StartButton;
-    StartButton = ButtonClass(Vector2f(200, 80), Vector2f(300, 200), Button_Start);
+
+    // NewGame Image
+    Texture NewGame;
+    NewGame.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    ButtonClass NewGame_Button;
+    NewGame_Button = ButtonClass(Vector2f(200, 60), Vector2f(300, 200), NewGame);
+
+    // LoadGame Image
+    Texture LoadGame;
+    LoadGame.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    ButtonClass LoadGame_Button(Vector2f(200, 60), Vector2f(300, 280), LoadGame);
+
+    // LeaderBoard
+    Texture LeaderBoard;
+    LeaderBoard.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    ButtonClass LeaderBoard_Button(Vector2f(200, 60), Vector2f(300, 360), LeaderBoard);
+
+    // Instruction
+    Texture Instruction;
+    Instruction.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    ButtonClass Instruction_Button(Vector2f(200, 60), Vector2f(300, 440), Instruction);
+
+    // Author
+    Texture Author;
+    Author.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    ButtonClass Author_Button(Vector2f(200, 60), Vector2f(300, 520), Author);
 
     while(start_window.isOpen()) {
         Event event;
 
+        // Close the window
         while(start_window.pollEvent(event)) {
             if(event.type == Event::Closed) {
                 start_window.close();
@@ -32,21 +56,26 @@ void startscreen() {
         start_window.clear(Color::Black);
 
         // Draw here
-        //Make_StartBG();
+
+        //Make_Background;
         start_window.draw(StartBg_Sprite);
 
+        // Make NewGame button
+        start_window.draw(NewGame_Button.Rect);
 
-        start_window.draw(StartButton.Rect);
+        // Make LoadGame button
+        start_window.draw(LoadGame_Button.Rect);
 
-        bool isPress = false;
-        while(Mouse::isButtonPressed(Mouse::Left)) isPress = true;
+        // MAKE LeaderBoard
+        start_window.draw(LeaderBoard_Button.Rect);
 
-        if(isPress == true)
-        {
-            StartButton.Rect.setFillColor(Color::Red);
-        }
-        // MAKE SCORE
         // MAKE INSTRUCTION
+        start_window.draw(Instruction_Button.Rect);
+
+        // Make Author
+        start_window.draw(Author_Button.Rect);
+
+        // Into NewGame Button
 
         // Display
         start_window.display();
