@@ -1,15 +1,8 @@
-#include <SFML/Graphics.hpp>
-#include <bits/stdc++.h>
-
-using namespace sf;
-
-#include "MYCONST.h"
-#include "BUTTON.h"
-#include "MOUSE.h"
+#include "STARTSCREEN.h"
 
 void Startscreen() {
     // Make the window
-    RenderWindow start_window(VideoMode(SROW, SCOL), "My Window");
+    RenderWindow start_window(VideoMode(Startscreen_Col, Startscreen_Row), "My Window");
 
     // Create background
     Texture StartBg;
@@ -19,29 +12,29 @@ void Startscreen() {
 
     // NewGame Image
     Texture NewGame;
-    NewGame.loadFromFile("IMAGE/MINESWEEPER.jpg");
+    NewGame.loadFromFile("IMAGE/NEWGAME.png");
     ButtonClass NewGame_Button;
-    NewGame_Button = ButtonClass(Vector2f(200, 60), Vector2f(300, 200), NewGame);
+    NewGame_Button = ButtonClass(Vector2f(Button_Col, Button_Row), Vector2f(300, 200), NewGame);
 
     // LoadGame Image
     Texture LoadGame;
-    LoadGame.loadFromFile("IMAGE/MINESWEEPER.jpg");
-    ButtonClass LoadGame_Button(Vector2f(200, 60), Vector2f(300, 280), LoadGame);
+    LoadGame.loadFromFile("IMAGE/LOADGAME.png");
+    ButtonClass LoadGame_Button(Vector2f(Button_Col, Button_Row), Vector2f(300, 280), LoadGame);
 
     // LeaderBoard
     Texture LeaderBoard;
-    LeaderBoard.loadFromFile("IMAGE/MINESWEEPER.jpg");
-    ButtonClass LeaderBoard_Button(Vector2f(200, 60), Vector2f(300, 360), LeaderBoard);
+    LeaderBoard.loadFromFile("IMAGE/LEADERBOARD.png");
+    ButtonClass LeaderBoard_Button(Vector2f(Button_Col, Button_Row), Vector2f(300, 360), LeaderBoard);
 
     // Instruction
     Texture Instruction;
-    Instruction.loadFromFile("IMAGE/MINESWEEPER.jpg");
-    ButtonClass Instruction_Button(Vector2f(200, 60), Vector2f(300, 440), Instruction);
+    Instruction.loadFromFile("IMAGE/INSTRUCTION.png");
+    ButtonClass Instruction_Button(Vector2f(Button_Col, Button_Row), Vector2f(300, 440), Instruction);
 
     // Author
     Texture Author;
-    Author.loadFromFile("IMAGE/MINESWEEPER.jpg");
-    ButtonClass Author_Button(Vector2f(200, 60), Vector2f(300, 520), Author);
+    Author.loadFromFile("IMAGE/AUTHOR.png");
+    ButtonClass Author_Button(Vector2f(Button_Col, Button_Row), Vector2f(300, 520), Author);
 
     while(start_window.isOpen()) {
         Event event;
@@ -76,6 +69,22 @@ void Startscreen() {
         start_window.draw(Author_Button.Rect);
 
         // Into NewGame Button
+        bool isPress = false;
+
+        while(Mouse::isButtonPressed(Mouse::Left)) isPress = true;
+
+        Vector2f Position = start_window.mapPixelToCoords(Mouse::getPosition(start_window));
+
+        if(isPress) {
+            if(NewGame_Button.Rect.getGlobalBounds().contains(Position)) {
+                // Go into Select Difficulty Screen
+                //NewGame_Screen();
+                Select_Difficulty_Screen();
+                start_window.close();
+            }
+        }
+
+        // Into LoadGame Button
 
         // Display
         start_window.display();

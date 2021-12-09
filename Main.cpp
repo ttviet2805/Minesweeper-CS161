@@ -4,7 +4,6 @@
 using namespace std;
 
 #include "STARTSCREEN.h"
-#include "MYCONST.h"
 
 int main() {
     //Make the start screen
