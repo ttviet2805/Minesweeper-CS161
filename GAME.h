@@ -5,9 +5,7 @@
 
 using namespace sf;
 
-#include "BUTTON.h"
-#include "INGAME.h"
 #include "MYCONST.h"
-#include "DIFFICULTY_SCREEN.h"
-
-void Startscreen();
+#include "BUTTON.h"
+#include "MOUSE.h"
+#include "INGAME.h"
