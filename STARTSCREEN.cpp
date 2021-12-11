@@ -2,7 +2,7 @@
 
 void Startscreen() {
     // Make the window
-    RenderWindow start_window(VideoMode(Startscreen_Col, Startscreen_Row), "My Window");
+    RenderWindow start_window(VideoMode(Startscreen_Col, Startscreen_Row), "MINESWEEPER");
 
     // Create background
     Texture StartBg;
@@ -68,21 +68,17 @@ void Startscreen() {
         // Make Author
         start_window.draw(Author_Button.Rect);
 
-        // Into NewGame Button
-        bool isPress = false;
-
-        while(Mouse::isButtonPressed(Mouse::Left)) isPress = true;
-
         Vector2f Position = start_window.mapPixelToCoords(Mouse::getPosition(start_window));
 
-        if(isPress) {
-            if(NewGame_Button.Rect.getGlobalBounds().contains(Position)) {
-                // Go into Select Difficulty Screen
-                //NewGame_Screen();
-                Select_Difficulty_Screen();
-                start_window.close();
-            }
+        // Into NewGame Button
+        int val = NewGame_Button.is_Clicked(Position);
+        if(val == 1) {
+            Select_Difficulty_Screen();
+            start_window.close();
         }
+
+        if(val == 2) NewGame_Button.Rect.setFillColor(Color::Green);
+        if(val == 0) NewGame_Button.Rect.setFillColor(Color::White);
 
         // Into LoadGame Button
 

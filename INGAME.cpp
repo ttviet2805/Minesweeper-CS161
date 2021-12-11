@@ -39,14 +39,14 @@ void NewGame_Screen(int type) {
 
     // Background Texture
     Texture Background;
-    Background.loadFromFile("IMAGE/MAR.jpg");
+    Background.loadFromFile("IMAGE/INGAME_BG.jpg");
     Sprite Background_Sprite;
     Background_Sprite.setTexture(Background);
 
     // Make state for Board
     int numMine = 0, numBomb = 0;
     if(type == 1) numMine = Num_Mine_Beginner, numBomb = 10;
-    if(type == 2) numMine = Num_Mine_Medium, numBomb = 20;
+    if(type == 2) numMine = Num_Mine_Intermediate, numBomb = 20;
     if(type == 3) numMine = Num_Mine_Expert, numBomb = 30;
 
     Build_Game(numMine, numBomb, State, Board);
@@ -72,6 +72,7 @@ void NewGame_Screen(int type) {
         Ingame_Window.clear(Color::Black);
 
         //draw here
+        Ingame_Window.draw(Background_Sprite);
 
         // Draw Board
         if(checkWin()) {
