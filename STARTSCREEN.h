@@ -9,5 +9,8 @@ using namespace sf;
 #include "INGAME.h"
 #include "MYCONST.h"
 #include "DIFFICULTY_SCREEN.h"
+#include "LEADERBOARD_SCREEN.h"
+#include "INSTRUCTION_SCREEN.h"
+#include "AUTHOR_SCREEN.h"
 
 void Startscreen();

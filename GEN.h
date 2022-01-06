@@ -1,4 +1,4 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Build_Game(int n, int Bomb, int a[105][105], int c[105][105]);
+void Build_Game(int m, int n, int Bomb, int a[41][41], int c[41][41]);

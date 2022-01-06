@@ -14,21 +14,4 @@ int main() {
         // TEAMNAME
         // Soundtrack
     Startscreen();
-
-    // Change to next screen after click start
-        // Menu
-            // New
-            // Save
-            // Exit
-            // Option: Soundtrack
-
-        // Time: Make a clock to alter time
-        // Difficulty
-        // The number of mines
-
-        // GAME
-
-    // Change to next screen after winning
-        // Fill your name
-        // Show leaderboard
 }

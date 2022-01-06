@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MINESWEEPER" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/MINESWEEPER" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-audio-d" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-network-d" />
+					<Add library="sfml-system-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/MINESWEEPER" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-network" />
+					<Add library="sfml-system" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu++11" />
+			<Add option="-std=c++11" />
+			<Add directory="../../../../../SFML-2.5.1/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../../../../../SFML-2.5.1/lib" />
+		</Linker>
+		<Unit filename="AUTHOR_SCREEN.cpp" />
+		<Unit filename="AUTHOR_SCREEN.h" />
+		<Unit filename="BUTTON.h" />
+		<Unit filename="CELL_BUTTON.h" />
+		<Unit filename="CUSTOM.cpp" />
+		<Unit filename="CUSTOM.h" />
+		<Unit filename="DIFFICULTY_SCREEN.cpp" />
+		<Unit filename="DIFFICULTY_SCREEN.h" />
+		<Unit filename="EXTRA_INGAME_INSTRUCTION.cpp" />
+		<Unit filename="EXTRA_INGAME_INSTRUCTION.h" />
+		<Unit filename="EXTRA_INSTRUCTION.cpp" />
+		<Unit filename="EXTRA_INSTRUCTION.h" />
+		<Unit filename="GAME.h" />
+		<Unit filename="GEN.cpp" />
+		<Unit filename="GEN.h" />
+		<Unit filename="INGAME.cpp" />
+		<Unit filename="INGAME.h" />
+		<Unit filename="INGAME_INSTRUCTION.cpp" />
+		<Unit filename="INGAME_INSTRUCTION.h" />
+		<Unit filename="INSTRUCTION_SCREEN.cpp" />
+		<Unit filename="INSTRUCTION_SCREEN.h" />
+		<Unit filename="LEADERBOARD_SCREEN.cpp" />
+		<Unit filename="LEADERBOARD_SCREEN.h" />
+		<Unit filename="LOSE_SCREEN.cpp" />
+		<Unit filename="LOSE_SCREEN.h" />
+		<Unit filename="MYCONST.h" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="RESET_SCREEN.cpp" />
+		<Unit filename="RESET_SCREEN.h" />
+		<Unit filename="SOLVE_TXT.cpp" />
+		<Unit filename="SOLVE_TXT.h" />
+		<Unit filename="STARTSCREEN.cpp" />
+		<Unit filename="STARTSCREEN.h" />
+		<Unit filename="TMP.cpp" />
+		<Unit filename="WIN_SCREEN.cpp" />
+		<Unit filename="WIN_SCREEN.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

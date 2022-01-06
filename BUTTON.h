@@ -29,4 +29,22 @@ class ButtonClass {
 
         return 0;
     }
+
+    int Check_Clicked(Vector2f Position) {
+        int isPress = 0;
+
+        if(Rect.getGlobalBounds().contains(Position)) {
+            while(Mouse::isButtonPressed(Mouse::Left)) isPress = 1;
+
+            if(isPress) return 1;
+
+            while(Mouse::isButtonPressed(Mouse::Right)) isPress = 3;
+
+            if(isPress == 3) return 3;
+
+            return 2;
+        }
+
+        return 0;
+    }
 };
