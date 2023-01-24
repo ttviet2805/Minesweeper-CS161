@@ -34,6 +34,8 @@ Beside 3 basic levels, we can choose the custom level to freely determine the nu
 * Remember to add all source codes to project before building and running
 
 ## Usage
+* The detail of Minesweeper Game is in the [Report.pdf](https://github.com/ttviet2805/Minesweeper-CS161/blob/master/Report.pdf).
+* Download and read [Report.pdf](https://github.com/ttviet2805/Minesweeper-CS161/blob/master/Report.pdf) to get the general view of Minesweeper.
 * Game Menu Screen
 <div align = "center">
   <img src = "Game-Demo/Menu.PNG" style = "width: 50%;">
