@@ -33,5 +33,16 @@ Beside 3 basic levels, we can choose the custom level to freely determine the nu
 * Using an IDE to compile this game (Codeblocks, Visual Studio, ...)
 * Remember to add all source codes to project before building and running
 
+## Usage
+* Game Menu Screen
+<div align = "center">
+  <img src = "Game-Demo/Menu.PNG" style = "width: 50%;">
+</div>
+
+* Game Screen
+<div align = "center">
+  <img src = "Game-Demo/Game.PNG" style = "width: 50%;">
+</div>
+
 ## Contact
 Tran Tuan Viet - ttviet2805@gmail.com
