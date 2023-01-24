@@ -24,8 +24,14 @@ Beside 3 basic levels, we can choose the custom level to freely determine the nu
 ## Getting Started
 ### Installing
 * Clone the project to your computer. 
+```
+  git clone https://github.com/ttviet2805/MINESWEEPER.git
+```
 * Set up [SFML Library] (https://www.sfml-dev.org/tutorials/2.5/start-vc.php).
 
 ### Executing program
 * Using an IDE to compile this game (Codeblocks, Visual Studio, ...)
 * Remember to add all source codes to project before building and running
+
+## Contact
+Tran Tuan Viet - ttviet2805@gmail.com
