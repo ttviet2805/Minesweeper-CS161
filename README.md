@@ -27,7 +27,7 @@ Beside 3 basic levels, we can choose the custom level to freely determine the nu
 ```
   git clone https://github.com/ttviet2805/MINESWEEPER.git
 ```
-* Set up [SFML Library] (https://www.sfml-dev.org/tutorials/2.5/start-vc.php).
+* Set up [SFML Library](https://www.sfml-dev.org/tutorials/2.5/start-vc.php).
 
 ### Executing program
 * Using an IDE to compile this game (Codeblocks, Visual Studio, ...)
